@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Pokemon from "./Pokemon"
+import './PokemonList.css';
 
 const PokemonList= ({ pokemons, handlePokemonClick }) => {
   if (pokemons == null || pokemons.length === 0) {
@@ -10,7 +11,7 @@ const PokemonList= ({ pokemons, handlePokemonClick }) => {
   console.log (pokemons) // if loged all pokemon, can inspect and see the path to the wanted property. Can also copy it and paste to the vscode.
 
   return (
-    <div>
+    <div className='PokemonList'>
       {pokemons.map((pokemon, index) => {
       return (
         <Pokemon

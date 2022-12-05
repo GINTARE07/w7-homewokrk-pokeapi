@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PokemonDetails from '../Components/PokemonDetails';
 import PokemonList from '../Components/PokemonList';
+import  './PokemonFinder.css';
 
 const PokemonFinder = () => {
     const [pokemons, setPokemons] = useState ([]);
@@ -35,11 +36,11 @@ const PokemonFinder = () => {
 
 
     return (
-        <>
-        <h2>this is Pokemon List:</h2>
+        <div className='PokemonFinder'>
+        <h2>This is Pokemon List:</h2>
         < PokemonList pokemons={pokemons} handlePokemonClick = {handlePokemonClick}/>
         <PokemonDetails name={selectedPokemon.name} weight= {selectedPokemon.weight} height= {selectedPokemon.height} image = {selectedPokemon.image}/>
-        </>
+        </div>
     )
 }
 

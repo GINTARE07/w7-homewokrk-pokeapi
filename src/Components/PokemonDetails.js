@@ -1,18 +1,19 @@
 import React from 'react';
+import './PokemonDetail.css';
 
 function PokemonDetails({name, height, weight, image}) {
 
 
   return (
-    <div className="pokemon">
-      <label>Name: </label>{name}
-      <label>Height: </label>{height}
-      <label>Weight: </label>{weight}
+    <>
+      <label index='Name'>Name: </label>{name}
+      <label index='Height'>Height: </label>{height}
+      <label index='Weight'>Weight: </label>{weight}
       <img
         src={image}
         alt={name} />
 
-    </div>
+    </>
   );
 };
 
